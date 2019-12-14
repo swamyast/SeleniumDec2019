@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<groups>
+			<define name="Full Regression">
+				<include name="sanity"></include>
+				<include name="smoke"></include>
+			</define>
+			<run>
+				<include name="sanity"></include>
+				<include name="win.*"></include>
+				<exclude name="linux.*"></exclude>
+				<include name="Full Regression"></include>
+				<include name="All tests"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="testNGExamples.GroupsDemo" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
