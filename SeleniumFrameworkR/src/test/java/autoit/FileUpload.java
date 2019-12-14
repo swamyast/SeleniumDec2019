@@ -17,6 +17,7 @@ public class FileUpload {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.navigate().to("http://www.tinyupload.com/");
 		driver.findElement(By.name("uploaded_file")).click();
+		// Blow exe will be created after compiling .au3 file
 		Runtime.getRuntime().exec("D:\\fileuploadFirefox.exe");
 		driver.quit();
 	}
